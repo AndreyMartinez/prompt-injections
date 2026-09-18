@@ -1,0 +1,44 @@
+{
+  "name": "prompt-injections",
+  "version": "0.1.0",
+  "description": "Catch prompt injection attacks in text: a zero-dependency, extensible scanner for instruction override, role hijack/jailbreaks, data exfiltration, fake delimiters, indirect injection and encoded/obfuscated payloads",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib/",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "prompt-injection",
+    "prompt-injections",
+    "llm-security",
+    "jailbreak",
+    "injection",
+    "security",
+    "security-scanner",
+    "ai-security",
+    "llm",
+    "rag",
+    "sanitize",
+    "sanitization",
+    "input-validation",
+    "owasp"
+  ],
+  "homepage": "https://github.com/AndreyMartinez/prompt-injections#readme",
+  "bugs": {
+    "url": "https://github.com/AndreyMartinez/prompt-injections/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreyMartinez/prompt-injections.git"
+  },
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "author": "Raphael Martinez",
+  "license": "MIT"
+}

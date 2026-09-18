@@ -1,0 +1,45 @@
+# Publishes prompt-injections to the public npm registry.
+#
+# Requires an npm access token stored as the repository secret NPM_TOKEN.
+# Create one at https://www.npmjs.com/settings/<user>/tokens (type:
+# "Automation" so it bypasses 2FA), then add it under
+# Settings → Secrets and variables → Actions → New repository secret.
+#
+# How it runs: publishes whatever version is in package.json when a GitHub
+# Release is published, or when you trigger it manually from the Actions tab.
+# Bump the version first for a new release, e.g.:
+#   npm version patch && git push && git push --tags
+
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
