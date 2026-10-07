@@ -1,6 +1,6 @@
 {
   "name": "prompt-injections",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Catch prompt injection attacks in text: a zero-dependency, extensible scanner for instruction override, role hijack/jailbreaks, data exfiltration, fake delimiters, indirect injection and encoded/obfuscated payloads",
   "main": "index.js",
   "files": [
