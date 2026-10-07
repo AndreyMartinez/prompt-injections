@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-label="prompt-injections: catch prompt injection before it reaches your LLM">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1b1140"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.55"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="400" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="400" rx="24" fill="url(#grid)"/>
+  <circle cx="1030" cy="200" r="260" fill="url(#glow)"/>
+
+  <text x="80" y="150" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="22" fill="#22d3ee" letter-spacing="3">$ npm i prompt-injections</text>
+  <text x="80" y="228" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="68" font-weight="800" fill="#ffffff">prompt-<tspan fill="url(#accent)">injections</tspan></text>
+  <text x="80" y="278" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="27" fill="#c7d2fe">Catch prompt injection before it reaches your LLM.</text>
+
+  <g font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="17" font-weight="600">
+    <rect x="80" y="314" width="150" height="38" rx="19" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="155" y="338" text-anchor="middle" fill="#e0e7ff">0 dependencies</text>
+    <rect x="244" y="314" width="150" height="38" rx="19" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="319" y="338" text-anchor="middle" fill="#e0e7ff">Extensible</text>
+    <rect x="408" y="314" width="170" height="38" rx="19" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="493" y="338" text-anchor="middle" fill="#e0e7ff">English + Español</text>
+  </g>
+
+  <!-- shield -->
+  <g transform="translate(1030 200)">
+    <path d="M0 -140 L110 -100 V10 C110 80 60 125 0 150 C-60 125 -110 80 -110 10 V-100 Z" fill="url(#shield)" fill-opacity="0.18" stroke="url(#shield)" stroke-width="5"/>
+    <path d="M0 -112 L84 -80 V8 C84 62 46 98 0 118 C-46 98 -84 62 -84 8 V-80 Z" fill="#0b1020" fill-opacity="0.65" stroke="#ffffff" stroke-opacity="0.12"/>
+    <path d="M-38 6 L-10 36 L42 -26" fill="none" stroke="#22d3ee" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- incoming attack lines -->
+  <g stroke="#f43f5e" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8">
+    <path d="M700 120 H840"/><path d="M730 200 H830" stroke-opacity="0.5"/><path d="M700 280 H840"/>
+  </g>
+  <g fill="#f43f5e"><circle cx="848" cy="120" r="6"/><circle cx="838" cy="200" r="6" fill-opacity="0.5"/><circle cx="848" cy="280" r="6"/></g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-label="Flow: untrusted text goes through the scanner, which blocks it or lets it through to the LLM">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1b1140"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a5b4fc"/></marker>
+  </defs>
+  <rect width="1280" height="360" rx="24" fill="url(#bg)"/>
+  <g font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" text-anchor="middle">
+    <text x="640" y="52" font-size="26" font-weight="700" fill="#ffffff">One call between untrusted text and your model</text>
+
+    <!-- input -->
+    <rect x="50" y="110" width="270" height="150" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="185" y="146" font-size="16" fill="#a5b4fc" font-weight="600" letter-spacing="1">UNTRUSTED TEXT</text>
+    <text x="185" y="186" font-size="14" fill="#e0e7ff" font-family="ui-monospace,Menlo,Consolas,monospace">user message</text>
+    <text x="185" y="210" font-size="14" fill="#e0e7ff" font-family="ui-monospace,Menlo,Consolas,monospace">web page · email</text>
+    <text x="185" y="234" font-size="14" fill="#e0e7ff" font-family="ui-monospace,Menlo,Consolas,monospace">RAG chunk · tool output</text>
+
+    <path d="M322 185 H400" stroke="#a5b4fc" stroke-width="3" marker-end="url(#arr)"/>
+
+    <!-- scanner -->
+    <rect x="410" y="90" width="460" height="190" rx="20" fill="#7c3aed" fill-opacity="0.18" stroke="url(#accent)" stroke-width="3"/>
+    <text x="640" y="130" font-size="20" font-weight="700" fill="#22d3ee" font-family="ui-monospace,Menlo,Consolas,monospace">promptInjections.scan(text)</text>
+    <g font-size="14" fill="#e0e7ff">
+      <rect x="436" y="150" width="130" height="30" rx="15" fill="#ffffff" fill-opacity="0.08"/><text x="501" y="170">override</text>
+      <rect x="575" y="150" width="130" height="30" rx="15" fill="#ffffff" fill-opacity="0.08"/><text x="640" y="170">role hijack</text>
+      <rect x="714" y="150" width="130" height="30" rx="15" fill="#ffffff" fill-opacity="0.08"/><text x="779" y="170">exfiltration</text>
+      <rect x="436" y="190" width="130" height="30" rx="15" fill="#ffffff" fill-opacity="0.08"/><text x="501" y="210">delimiters</text>
+      <rect x="575" y="190" width="130" height="30" rx="15" fill="#ffffff" fill-opacity="0.08"/><text x="640" y="210">indirect</text>
+      <rect x="714" y="190" width="130" height="30" rx="15" fill="#ffffff" fill-opacity="0.08"/><text x="779" y="210">encoded</text>
+    </g>
+    <text x="640" y="256" font-size="14" fill="#c7d2fe">+ your own addValidator() rules</text>
+
+    <!-- outputs -->
+    <path d="M872 150 C920 150 930 110 980 110" fill="none" stroke="#f43f5e" stroke-width="3" marker-end="url(#arr)"/>
+    <path d="M872 220 C920 220 930 260 980 260" fill="none" stroke="#34d399" stroke-width="3" marker-end="url(#arr)"/>
+
+    <rect x="990" y="70" width="240" height="90" rx="16" fill="#f43f5e" fill-opacity="0.14" stroke="#f43f5e" stroke-opacity="0.8" stroke-width="2"/>
+    <text x="1110" y="108" font-size="20" font-weight="700" fill="#fb7185">✕ Blocked</text>
+    <text x="1110" y="136" font-size="14" fill="#fecdd3">threats[] with type + severity</text>
+
+    <rect x="990" y="215" width="240" height="90" rx="16" fill="#34d399" fill-opacity="0.14" stroke="#34d399" stroke-opacity="0.8" stroke-width="2"/>
+    <text x="1110" y="253" font-size="20" font-weight="700" fill="#6ee7b7">✓ Safe → your LLM</text>
+    <text x="1110" y="281" font-size="14" fill="#bbf7d0">safe: true</text>
+  </g>
+</svg>
