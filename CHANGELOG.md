@@ -5,6 +5,11 @@ All notable changes to this project are documented here.
 This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] - 2026-10-07
+
+### Changed
+- Redesigned README with banner, flow diagram and threat-category illustrations.
+
 ## [0.1.0] - 2026-09-17
 
 Initial release.
