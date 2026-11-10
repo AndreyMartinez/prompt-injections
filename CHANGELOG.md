@@ -5,6 +5,29 @@ All notable changes to this project are documented here.
 This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] - 2026-11-10
+
+Update driven by newly reported prompt injection techniques against AI agents
+(MCP tool poisoning, promptware C2, persistent memory/config injection, hidden
+content and Unicode smuggling).
+
+### Added
+- `tool-poisoning` category: secret-file read + send instructions in tool
+  descriptions, "before using this tool..." lures, cross-server shadowing.
+- `concealment` category: "do not tell the user" / "without informing the
+  user" (en/es).
+- `persistence` category: instructions planted for future sessions or in
+  `AGENTS.md`, `CLAUDE.md`, `.cursorrules` and similar files.
+- `c2-promptware` category: agent told to fetch and obey remote instructions.
+- `hidden-content` category: instruction-bearing HTML comments, invisible CSS
+  text and ANSI terminal escape sequences.
+- `fake-delimiter`: `<system>`, `<IMPORTANT>`, `<<SYS>>`, `[INST]`, and extra
+  chat-template tokens (`<|endoftext|>`, `<|eot_id|>`, ...).
+- `indirect-injection`: "note to the assistant" and fake orchestrator messages.
+- `data-exfiltration`: more auto-loaded-URL parameters and DNS/subdomain exfil.
+- `encoded-payload`: bidi control characters and variation-selector smuggling
+  (decoded and re-scanned).
+
 ## [0.1.1] - 2026-10-07
 
 ### Changed

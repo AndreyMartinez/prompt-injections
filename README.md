@@ -45,6 +45,13 @@ model and tells you what it found, with type and severity.
 <img src="https://raw.githubusercontent.com/AndreyMartinez/prompt-injections/main/assets/threats.svg" alt="The six threat categories: instruction override, role hijack, data exfiltration, fake delimiters, indirect injection, encoded payloads" width="100%">
 </div>
 
+Since v0.2.0 it also covers agent-era attacks: MCP/tool poisoning and
+cross-server shadowing (`tool-poisoning`), "don't tell the user" concealment
+(`concealment`), memory / `AGENTS.md`-style persistence (`persistence`),
+remote-instruction C2 promptware (`c2-promptware`), hidden HTML/CSS/ANSI
+content (`hidden-content`), plus bidi and variation-selector smuggling under
+`encoded-payload`.
+
 Sibling project of [`injectguard`](https://www.npmjs.com/package/injectguard),
 same API style, different threat model: instead of SQL/XSS/command injection,
 this detects attempts to manipulate an LLM's behavior.
@@ -189,7 +196,8 @@ const strict = promptInjections.createScanner({ minSeverity: 'high' });
 
 Available categories: `instruction-override`, `role-hijack`,
 `data-exfiltration`, `fake-delimiter`, `indirect-injection`,
-`encoded-payload`.
+`tool-poisoning`, `concealment`, `persistence`, `c2-promptware`,
+`hidden-content`, `encoded-payload`.
 
 ---
 
