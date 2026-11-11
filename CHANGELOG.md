@@ -5,6 +5,12 @@ All notable changes to this project are documented here.
 This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and [Semantic Versioning](https://semver.org/).
 
+## [0.2.1] - 2026-11-11
+
+### Changed
+- README: new 11-category threat illustration, colored code example image and
+  updated evasion notes. No code changes.
+
 ## [0.2.0] - 2026-11-10
 
 Update driven by newly reported prompt injection techniques against AI agents
